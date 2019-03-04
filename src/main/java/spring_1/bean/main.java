@@ -1,18 +1,12 @@
-package spring_1.helloworld;
+package spring_1.bean;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import spring_1.bean.Car;
-import spring_1.bean.Person;
+import spring_1.helloworld.HelloWorld;
 
 public class main {
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("bean.xml");
+        ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("bean-collect.xml");
 
-
-        HelloWorld helloWorld = (HelloWorld)ctx.getBean("helloWorld");
-//        HelloWorld helloWorld = ctx.getBean(HelloWorld.class);
-
-        helloWorld.hello();
 
         Car car = (Car)ctx.getBean("car");
         System.out.println(car);

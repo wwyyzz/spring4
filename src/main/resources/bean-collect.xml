@@ -6,16 +6,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
 
-    <!-- 配置一个 bean -->
-    <bean id="helloWorld" class="spring_1.helloworld.HelloWorld">
-        <!-- 为属性赋值 -->
-        <property name="user" value="Jerry"></property>
-    </bean>
 
-    <bean id="helloWorld2" class="spring_1.helloworld.HelloWorld">
-        <!-- 为属性赋值 -->
-        <property name="user" value="Tom"></property>
-    </bean>
 
     <bean id="car" class="spring_1.bean.collection.Car">
         <constructor-arg value="Audi" index="0"></constructor-arg>
@@ -36,26 +27,15 @@
         <property name="price" value="500000"></property>
     </bean>
 
-    <bean id="car4" class="spring_1.bean.Car">
+    <bean id="car4" class="spring_1.bean.collection.Car">
         <!-- 为属性赋值 -->
         <property name="brand" value="Benz"></property>
         <property name="corp" value="beijing"></property>
         <property name="maxSpeed" value="250"></property>
     </bean>
 
-    <bean id="person" class="spring_1.bean.Person">
-        <property name="name" value="Mike"></property>
-        <property name="age" value="24"></property>
-        <property name="car" ref="car4"></property>
-        <property name="car.maxSpeed" value="500"></property>
-    </bean>
 
-    <!--<bean id="person2" class="spring_1.bean.collection.Person">-->
-        <!--<constructor-arg value="Alice"></constructor-arg>-->
-        <!--<constructor-arg value="25"></constructor-arg>-->
-        <!--<constructor-arg ref="car3"></constructor-arg>-->
-        <!--<property name="car.maxSpeed" value="220"></property>-->
-    <!--</bean>-->
+
 
     <bean id="person3" class="spring_1.bean.collection.Person">
         <property name="name" value="Bob"></property>
@@ -67,5 +47,20 @@
                 <ref bean="car3"></ref>
             </list>
         </property>
+    </bean>
+
+    <bean id="person4" class="spring_1.bean.collection.Person">
+        <property name="name" value="Carl"></property>
+        <property name="age" value="31"></property>
+        <property name="car" ref="cars"></property>
+    </bean>
+
+    <util:list id="cars">
+        <ref bean="car"></ref>
+        <ref bean="car2"></ref>
+        <ref bean="car3"></ref>
+    </util:list>
+
+    <bean id="person5" class="spring_1.bean.collection.Person" p:age="30" p:name="David" p:car-ref="cars">
     </bean>
 </beans>
