@@ -15,7 +15,7 @@ public class InstanceCarFactory {
     public InstanceCarFactory() {
         cars = new HashMap<String, Car>();
         cars.put("audi", new Car("audi", 300000));
-        cars.put("ford", new Car("audi", 200000));
+        cars.put("ford", new Car("ford", 200000));
     }
 
     public Car getCar(String brand){

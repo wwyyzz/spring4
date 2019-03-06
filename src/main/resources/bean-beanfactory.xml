@@ -6,16 +6,12 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
 
-    <bean id="car1" class="spring_1.bean.factory.StaticCarFactory" factory-method="getCar">
-        <constructor-arg value="audi"></constructor-arg>
+    <bean id="car" class="spring_1.bean.factorybean.CarFactoryBean" >
+        <property name="brand" value="BMW"></property>
 
     </bean>
 
-    <bean id="carfactory" class="spring_1.bean.factory.InstanceCarFactory"></bean>
 
-    <bean id="car2" factory-bean="carfactory" factory-method="getCar">
-        <constructor-arg value="ford"></constructor-arg>
-    </bean>
 
 
 
