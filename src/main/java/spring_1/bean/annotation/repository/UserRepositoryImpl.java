@@ -12,6 +12,7 @@ import org.springframework.stereotype.Repository;
 public class UserRepositoryImpl implements UserRepository{
 
     public void save() {
+
         System.out.println("UserRepository Save...");
     }
 }

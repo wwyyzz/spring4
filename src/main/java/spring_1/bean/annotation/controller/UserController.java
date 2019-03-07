@@ -1,6 +1,8 @@
 package spring_1.bean.annotation.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import spring_1.bean.annotation.service.UserService;
 
 /**
  * @program: spring4
@@ -11,8 +13,11 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class UserController {
 
+    @Autowired
+    private UserService userService ;
+
     public void execute(){
         System.out.println("UserController execute...");
+        userService.add();
     }
-
 }
