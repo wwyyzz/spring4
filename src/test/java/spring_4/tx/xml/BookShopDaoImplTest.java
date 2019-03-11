@@ -18,16 +18,16 @@ public class BookShopDaoImplTest {
 
     @Test
     public void testfindBookPriceBIsbn() {
-        System.out.println(bookShopDao.findBookPriceBIsbn("1001"));
+        System.out.println(bookShopDao.findBookPriceBIsbn("0001"));
     }
 
     @Test
     public void testupdateBookStore() {
-        bookShopDao.updateBookStore("1001");
+        bookShopDao.updateBookStore("0001");
     }
 
     @Test
     public void testupdateUserAccount() {
-        bookShopDao.updateUserAccount("AA", 100);
+        bookShopDao.updateUserAccount("Mike", 10);
     }
 }
