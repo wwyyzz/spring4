@@ -20,7 +20,7 @@ public class mainTest {
     @Test
     public void testDataSource() throws SQLException {
         DataSource dataSource;
-        dataSource = (DataSource) ctx.getBean("DataSource.class");
+        dataSource = (DataSource) ctx.getBean("dataSource.class");
         System.out.println(dataSource);
     }
 }
