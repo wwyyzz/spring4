@@ -25,7 +25,6 @@
         <property name="dataSource" ref="dataSource"></property>
     </bean>
 
-
     <!--<context:component-scan base-package="spring_5.hibernate"></context:component-scan>-->
 
 
